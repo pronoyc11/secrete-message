@@ -53,12 +53,30 @@ function changeTheme() {
     codeForm.style.backgroundColor = "#84C3CA";
     labels[0].style.color = "";
     labels[1].style.color = "";
+    submitButton.style.boxShadow = "";
+    submitButton.addEventListener("mouseout",()=>{
+
+      submitButton.style.boxShadow = "";
+    })
   } else if(urlValue === themeArr[0]) {
-    codeForm.style.backgroundColor = "#990423";
-    console.log(labels)
+    codeForm.style.backgroundColor = "#5E5C5D";
     labels[0].style.color = "#fff";
     labels[1].style.color = "#fff";
+    submitButton.style.boxShadow = "none";
+    submitButton.addEventListener("mouseover",()=>{
+
+      submitButton.style.boxShadow = "1px 1px 0.5rem 1px white";
+    })
+    submitButton.addEventListener("mouseout",()=>{
+
+      submitButton.style.boxShadow = "none";
+    })
   }else{
+    submitButton.addEventListener("mouseout",()=>{
+
+      submitButton.style.boxShadow = "";
+    })
+    submitButton.style.boxShadow = "";
     codeForm.style.backgroundColor = "";
     labels[0].style.color = "";
     labels[1].style.color = "";
