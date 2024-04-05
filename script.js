@@ -6,6 +6,7 @@ const showMessage = document.querySelector(".show-message");
 const codeValue = document.querySelector("#code-input");
 const nameValue = document.querySelector("#name-input");
 const userName = document.querySelector("#user-name");
+const submitButton = document.querySelector("#submit-button");
 //Gathering all dom elements end
 
 //THME OPERATION STARTS
@@ -23,9 +24,9 @@ codeForm.addEventListener("submit",decryptCode);
 
 function changeTheme() {
     const themeArr = [
-      'ub.io/secrete-message/images/BluePaper.jpg',
-      'ub.io/secrete-message/images/rose-bg.jpg',
-      'ub.io/secrete-message/images/TelephoneBg.jpg',
+      'url("https://pronoyc11.github.io/secrete-message/images/BluePaper.jpg")',
+      'url("https://pronoyc11.github.io/secrete-message/images/rose-bg.jpg")',
+      'url("https://pronoyc11.github.io/secrete-message/images/TelephoneBg.jpg")',
     ];
   let style = getComputedStyle(body);
   // let codeFormStyle = getComputedStyle(codeForm)
@@ -37,9 +38,9 @@ function changeTheme() {
   console.log("url:",urlValue)
   console.log("index:",themeIndex)
   if (themeIndex === themeArr.length - 1) {
-      body.style.backgroundImage = `url("${themeArr[0].slice(22)}")`;
+      body.style.backgroundImage = `url("${themeArr[0].slice(49)}")`;
     } else {
-        body.style.backgroundImage = `url("${themeArr[themeIndex + 1].slice(22)}")`;
+        body.style.backgroundImage = `url("${themeArr[themeIndex + 1].slice(49)}")`;
     }
     if (urlValue === themeArr[1]) {
       codeForm.style.backgroundColor = "#C6DBC6";
@@ -142,7 +143,7 @@ function encryptMsg(str){
 
 function decryptCode(e){
     e.preventDefault();
-  
+    submitButton.setAttribute("disabled",null);
      let text = showMessage.lastElementChild;
      userName.innerHTML = `Dear ${nameValue.value.trim().toLowerCase()},`
      text.innerHTML = "";
@@ -156,6 +157,7 @@ function decryptCode(e){
            i++ ;}
            else {
             clearInterval(intervalId);
+          submitButton.removeAttribute("disabled");
            }
            console.log()
         },100)
