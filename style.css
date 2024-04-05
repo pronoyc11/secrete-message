@@ -5,7 +5,8 @@
 }
 body{
     font-family: "Simonetta", serif;
-    background-image: url("images/BluePaper.jpg");
+   background-image: url("https://img.freepik.com/free-photo/blue-paper-red-flower-petals_23-2148031526.jpg?size=626&ext=jpg&uid=R143827644&ga=GA1.1.407465969.1712125518&semt=ais");
+    /* background-image: url("https://growgreencapital.co.in/wp-content/uploads/2023/05/con-12.jpeg"); */
     background-size:100% 100%;
     background-repeat: no-repeat;
     transition: all 0.5s;
@@ -14,6 +15,7 @@ body{
 }
 :root{
     --ashBlue: #BFD8CE;
+    --fineBlue: #84C3CA ;
     --body-color: #F1DBDC;
     --intense-body-color: #A09292
 }
@@ -70,7 +72,7 @@ body{
     border: 1px solid transparent;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #BFD8CE;
+    background-color: var(--fineBlue);
     color: black;
     box-shadow: 1px 1px 0.5rem 1px white;
     transition: all 0.5s;
@@ -106,9 +108,10 @@ body{
 #theme-button:hover{
     font-family: "Simonetta", serif;
     font-size: large;
-    color:black;
-    background-color: var(--ashBlue);
+    color:white;
+    background-color: var(--fineBlue);
     box-shadow: 1px 1px 0.5rem 5px white;
+   /*  filter: drop-shadow(white 1px 1px 1px 0.5rem); */
     cursor: pointer;
 }
 /*Theme button design ends*/
