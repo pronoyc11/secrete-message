@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Simonetta", serif;
+    background-image: url("/images/BluePaper.jpg");
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    transition: all 0.5s;
+
+                                                
+}
+:root{
+    --ashBlue: #BFD8CE;
+    --body-color: #F1DBDC;
+    --intense-body-color: #A09292
+}
+/*The whole container style starts */
+#MessageContainer{
+    
+
+    transition: all 0.5s;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2rem;
+    margin: auto;
+    
+}
+/*The whole container style ends */
+/*CODE-Form container design starts*/
+.code-form{
+    border : 5px solid white ;
+    border-radius: 10px;
+    width:20rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    /* font-family: "Inter", sans-serif; */
+    font-size: large;
+    gap: 7px;
+    background-color: var(--body-color);
+    transition: all 0.5s;
+
+}
+.code-form .input-div input{
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 5px;
+    height: 2rem;
+    margin: 10px 0;
+    padding: 0 0 0 10px;
+}
+
+.code-form .input-div{
+ 
+   display: flex;
+   flex-direction: column;
+   
+   
+}
+#submit-button{
+    width: 100%;
+    height: 2rem;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #BFD8CE;
+    color: black;
+    box-shadow: 1px 1px 0.5rem 1px white;
+    transition: all 0.5s;
+    font-family: "Simonetta", serif;
+    font-size: large;
+}
+
+#submit-button:hover{
+    box-shadow: 1px 1px 0.5rem 1px white ;
+    background-color: var(--intense-body-color);
+    color: white;
+    transform: scale(1.1);
+
+}
+
+/*CODE-Form container design ends*/
+/*Theme button design starts*/
+#theme-button-container{
+    display: grid;
+}
+#theme-button{
+    background-color: var(--intense-body-color);
+    color: white;
+    border:1px solid transparent ;
+    padding: 10px 5px;
+    border-radius: 5px;
+    display: inline-flex;
+    justify-self:center;
+    margin: 50px 10px 0px 0;
+    position: absolute;
+    transition: all 0.5s;
+}
+#theme-button:hover{
+    font-family: "Simonetta", serif;
+    font-size: large;
+    color:black;
+    background-color: var(--ashBlue);
+    box-shadow: 1px 1px 0.5rem 5px white;
+    cursor: pointer;
+}
+/*Theme button design ends*/
+/*Show message container style starts */
+/* .show-message{
+    background-image: url("/images/—Pngtree—note\ demolition\ spiral\ notebook\ torn_8940648.png");
+    background-size:100% 100% ;
+    background-repeat: no-repeat;
+    transition: all 0.5s;
+    width: 5rem;
+    height: 5rem;
+    
+  
+} */
+
+.show-message {
+    width: 20rem;
+    height: 60%;
+    background-color: white;
+    padding: 1rem 0 0 1rem;
+    /* text-align: center; */
+    box-shadow: 1px 1px 0.5rem 1px white ;
+}
+.show-message p{
+    font-family: "Simonetta", serif;
+    /* filter:drop-shadow(var(--ashBlue) 1rem 1rem 1px); */
+    font-size: 22px;
+    font-weight:lighter;
+    font-style: italic;
+   
+}
+#user-name{
+    margin: 0px 0 5px 0;
+    display: block;
+    font-style: italic;
+    font-weight: normal;
+    font-size: larger;
+}
+/*Show message container style ends */
+/*Copyright section starts*/
+#copyright-container{
+    display: grid;
+}
+#copyright{
+    display: inline-block;
+    /* width: 50%; */
+    /* margin: auto; */
+    display: block;
+    /* width: 100%; */
+    text-align: center;
+    padding: 10px 30px 10px 30px;
+    position: absolute;
+    bottom: 0px;
+    color: black;
+    background-color: var(--ashBlue);
+    justify-self: right;
+    opacity: 60%;
+    border-radius: 20px;
+}
+/*Copyright section ends*/
+
+/*Responsive operation starts */
+@media only screen and (max-width: 600px) {
+    /*The whole container style starts */
+    #MessageContainer{
+        
+        
+        transition: all 0.5s;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+        margin: auto;
+        margin-top: 2.4rem;
+        
+    }
+    /*The whole container style ends */
+#theme-button{
+    position:fixed;
+  margin: 15px 0px 0px 0px; 
+}
+#theme-button-container{
+    display: flex;
+    justify-content: center;
+}
+#copyright{
+    position: sticky;
+    justify-self: center;
+}
+  }
+/*Responsive operation ends */
+
