@@ -7,6 +7,7 @@ const codeValue = document.querySelector("#code-input");
 const nameValue = document.querySelector("#name-input");
 const userName = document.querySelector("#user-name");
 const submitButton = document.querySelector("#submit-button");
+const labels = document.querySelectorAll(".label");
 //Gathering all dom elements end
 
 //THME OPERATION STARTS
@@ -50,8 +51,18 @@ function changeTheme() {
   }
   if (urlValue === themeArr[1]) {
     codeForm.style.backgroundColor = "#84C3CA";
-  } else {
+    labels[0].style.color = "";
+    labels[1].style.color = "";
+  } else if(urlValue === themeArr[0]) {
+    codeForm.style.backgroundColor = "#990423";
+    console.log(labels)
+    labels[0].style.color = "#fff";
+    labels[1].style.color = "#fff";
+  }else{
     codeForm.style.backgroundColor = "";
+    labels[0].style.color = "";
+    labels[1].style.color = "";
+
   }
  
 }
