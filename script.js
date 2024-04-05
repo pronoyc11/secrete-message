@@ -34,10 +34,12 @@ function changeTheme() {
   let urlValue = style.getPropertyValue("background-image");
     
   let themeIndex = themeArr.indexOf(urlValue);
+  console.log("url:",urlValue)
+  console.log("index:",themeIndex)
   if (themeIndex === themeArr.length - 1) {
-      body.style.backgroundImage = `(url"${themeArr[0].slice(22)}")`;
+      body.style.backgroundImage = `url("${themeArr[0].slice(22)}")`;
     } else {
-        body.style.backgroundImage = `(url"${themeArr[themeIndex + 1].slice(22)}")`;
+        body.style.backgroundImage = `url("${themeArr[themeIndex + 1].slice(22)}")`;
     }
     if (urlValue === themeArr[1]) {
       codeForm.style.backgroundColor = "#C6DBC6";
