@@ -5,7 +5,7 @@
 }
 body{
     font-family: "Simonetta", serif;
-    background-image: url("/images/BluePaper.jpg");
+    background-image: url("images/BluePaper.jpg");
     background-size:100% 100%;
     background-repeat: no-repeat;
     transition: all 0.5s;

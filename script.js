@@ -23,23 +23,23 @@ codeForm.addEventListener("submit",decryptCode);
 
 function changeTheme() {
     const themeArr = [
-      'url("/images/BluePaper.jpg")',
-      'url("/images/rose-bg.jpg")',
-      'url("/images/TelephoneBg.jpg")',
+      'url("images/BluePaper.jpg")',
+      'url("images/rose-bg.jpg")',
+      'url("images/TelephoneBg.jpg")',
     ];
   let style = getComputedStyle(body);
   // let codeFormStyle = getComputedStyle(codeForm)
   // let colorValue = codeFormStyle.backgroundColor ;
   // console.log(colorValue);
-  let urlValue = style.getPropertyValue("background-image").slice(26);
-
-  let themeIndex = themeArr.indexOf(`url("${urlValue}`);
+  let urlValue = style.getPropertyValue("background-image").slice(27,-2);
+    console.log(urlValue);
+  let themeIndex = themeArr.indexOf(`url("${urlValue}")`);
   if (themeIndex === themeArr.length - 1) {
       body.style.backgroundImage = themeArr[0];
     } else {
         body.style.backgroundImage = themeArr[themeIndex + 1];
     }
-    if (`url("${urlValue}` === themeArr[1]) {
+    if (`url("${urlValue}")` === themeArr[1]) {
       codeForm.style.backgroundColor = "#C6DBC6";
       
     } else {
