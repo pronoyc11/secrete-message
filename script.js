@@ -38,9 +38,11 @@ function changeTheme() {
   console.log("url:",urlValue)
   console.log("index:",themeIndex)
   if (themeIndex === themeArr.length - 1) {
-      body.style.backgroundImage = `url("${themeArr[0].slice(49)}")`;
+      body.style.backgroundImage = `url("${themeArr[0].slice(49)}`;
     } else {
-        body.style.backgroundImage = `url("${themeArr[themeIndex + 1].slice(49)}")`;
+        let str = `url("${themeArr[themeIndex + 1].slice(49)}`;
+        body.style.backgroundImage = str;
+        console.log(str);
     }
     if (urlValue === themeArr[1]) {
       codeForm.style.backgroundColor = "#C6DBC6";
